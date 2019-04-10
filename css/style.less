@@ -1,0 +1,301 @@
+@black:#323232;
+@grey:rgba(200,200,200,0.5);
+@vert:#657E6C;
+@beige:#7E7272;
+@red:#EB262C;
+@blue:#326295;
+@blueLight:#4B9EE4;
+
+@keyframes backgroundtranslation{
+	0%{
+		transform: translate3d(-50%,0,0);
+	}
+	50%{
+		transform: translate3d(0%,0,0);
+	}
+	100%{
+		transform: translate3d(-50%,0,0);
+	}
+}
+
+@font-face {
+ font-family: "dusha";
+ src: url("dusha.ttf");
+}
+
+body, html{
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-family: 'dusha';
+}
+
+body{
+	position: relative;
+}
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 70px;
+	background-color: white;
+	color: @red;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	h1{
+		margin: 0;
+	}
+	p{
+		margin: 0;
+	}
+	a{
+		position: absolute;
+		left: 50px;
+		font-size: 2em;
+		color: @blueLight;
+		text-decoration: none;
+	}
+	input{
+		position: absolute;
+		right: 50px;
+		padding: 10px;
+		border-radius: 50px;
+		background-color: @red;
+		font-size: 1.2em;
+		font-family: 'dusha';
+		border: none;
+		cursor: pointer;
+		color: white;
+		margin: auto;
+		display: table;
+	}
+}
+#background{
+	width: 100%;
+	height: 100%;
+	>div{
+		width: 200%;
+		margin: auto;
+		height: 100%;
+		background-image: url("../img/bg.jpg");
+		background-size: auto 100%;
+		background-position: center;
+		animation: backgroundtranslation 100s infinite;
+	}
+	
+	overflow: hidden;
+	margin: 0;
+}
+#contenu{
+	position: absolute;
+	top: 70px;
+	left: 0;
+	right: 0;
+	bottom: 70px;
+	overflow-y: auto;
+	>div{
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+	}
+}
+footer{
+	position: absolute;
+	color: white;
+	font-size: 1.5em;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 70px;
+	background-color: @blue;
+	input{
+		background-color: @blueLight;
+		border:none;
+		padding: 5px 15px;
+		border-radius: 50px;
+		color: white;
+		font-size: 1.3em;
+		font-family: 'dusha';
+	}
+}
+
+#demarrage{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	input{
+		background-color: @red;
+		color: white;
+		font-family: 'dusha';
+		border-radius: 50px;
+		padding: 20px;
+		cursor: pointer;
+		border: none;
+		font-size: 3em;
+		margin: 20px;
+	}
+	#readMe{
+		background-color: @blue;
+		font-size: 2em;
+	}
+}
+
+#readMeContenu{
+	font-size: 2em;
+	text-align: center;
+			display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	a{
+		text-decoration: none;
+		color: @blueLight;
+	}
+	>div{
+		height: 100%;
+	}
+}
+
+#continent{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	ul{
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li{
+			color: @blueLight;
+			font-size: 2em;
+			padding: 10px;
+			transition: 0.3s background-color;
+			&:hover{
+				background-color:@grey;
+				cursor: pointer;
+			}
+		}
+		img{
+			width: 200px;
+			height: 200px;
+		}
+	}
+	.bouttonContinent{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		margin: 20px;
+	}
+}
+
+#pays{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	ul{
+		height: 100%;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li{
+			color: @blueLight;
+					width: 140px;
+			font-size: 2em;
+			padding: 10px;
+			transition: 0.3s background-color;
+			&:hover{
+				background-color:@grey;
+				cursor: pointer;
+			}
+		}
+	}
+	.bouttonPays{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin: 20px;
+		img{
+			width: 120px;
+			height: auto;
+		}
+	}
+}
+#info{
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	#infoPays{
+		height: 100%;
+		h1{
+			text-align: center;
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			text-align: center;
+			font-size: 1.5em;
+			li{
+				margin: 20px;
+			}
+		}
+		img{
+			width: 200px;
+			height: auto;
+			display: block;
+			margin: auto;
+		}
+		.titreInfo{
+			background-color: @blueLight;
+			color: white;
+			border-radius: 20px;
+			padding: 5px;
+		}
+		input{
+			padding: 20px;
+			border-radius: 50px;
+			background-color: @red;
+			font-size: 2em;
+			font-family: 'dusha';
+			border: none;
+			cursor: pointer;
+			color: white;
+			margin: auto;
+			display: table;
+		}
+	}
+}
+
+#match{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	#matchDiv{
+		height: 100%;
+	}
+	p{
+		text-align: center;
+		font-size: 2em;
+	}
+}
+
+#canvasMatch{
+	background-image: url("../img/stade-01.svg"); 
+}
